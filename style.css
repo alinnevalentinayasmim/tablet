@@ -23,21 +23,39 @@ header h1 {
 nav ul {
     list-style-type: none;
     padding: 0;
+    text-align: center; /* Centraliza os links na navegação */
 }
 
 nav ul li {
     display: inline;
-    margin-right: 20px;
+    margin-right: 10px; /* Reduzido o espaçamento entre os itens do menu */
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
+    padding: 5px 10px; /* Adicionado padding para melhorar a usabilidade em dispositivos móveis */
+    border-radius: 5px; /* Borda arredondada nos botões */
+    border: 1px solid transparent; /* Adicionado uma borda transparente nos botões */
+    transition: all 0.3s ease; /* Transição suave para efeito de hover */
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Fundo branco com opacidade no hover */
+    border-color: #fff; /* Borda branca no hover */
 }
 
 /* Estilos para as seções */
 section {
     padding: 20px;
+    margin: 20px 0; /* Espaçamento entre as seções */
+    background-color: #fff; /* Fundo branco para melhor legibilidade */
+    border-radius: 5px; /* Borda arredondada nas seções */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave para destacar as seções */
+}
+
+section h2 {
+    margin-top: 0; /* Remove o espaçamento superior do título */
 }
 
 /* Estilos para o rodapé */
@@ -45,5 +63,29 @@ footer {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 20px;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Media query para telas menores (até 768px de largura) */
+@media (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    nav ul {
+        display: block;
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    section {
+        padding: 15px;
+    }
 }
